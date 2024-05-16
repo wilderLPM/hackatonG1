@@ -51,7 +51,6 @@ export default function Map() {
           <img src={images[currentIndex]} alt="tree" />
         )}
       </div>
-      <p>{destination}</p>
     </>
   );
 }
