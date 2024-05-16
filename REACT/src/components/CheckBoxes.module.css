@@ -1,0 +1,73 @@
+/* CheckBoxes.module.css */
+
+/* Styles pour le fieldset */
+.customFieldset {
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+}
+
+/* Styles pour le legend */
+.customLegend {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4CAF50;
+    padding: 0 10px;
+    background-color: #fff;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+}
+
+/* Styles pour les boutons */
+.buttonsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.selectButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 50%;
+    padding: 10px;
+    margin: 5px;
+    font-size: 1.1em;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.selectButton:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.selected {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.buttonImage {
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.buttonText {
+    margin-top: 10px;
+}
+
+/* Media query for desktop */
+@media screen and (min-width: 768px) {
+    .selectButton {
+        flex: 1 1 calc(50% - 10px);
+        /* Subtract margin to fit 2 buttons per row */
+    }
+}

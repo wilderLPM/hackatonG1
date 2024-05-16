@@ -1,6 +1,6 @@
 @font-face {
     font-family: "";
-    src: url(assets/RobotoCondensed-Thin.ttf);
+    src: url(assets/Roboto/RobotoCondensed-Thin.ttf);
 }
 
 :root {
@@ -10,9 +10,4 @@
 *{
     margin: 0;
     padding: 0;
-}
-
-h1{
-    font-family: var(--font-family-title);
-    font-size: 10vh;
 }

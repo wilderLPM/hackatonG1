@@ -7,7 +7,7 @@ export default function Home(){
     const [checkedValue, setCheckedValue] = useState(null)
     return(
         <>
-            <Checkboxes setCheckedValue={setCheckedValue} />
+            <Checkboxes setCheckedValue={setCheckedValue} checkedValue={checkedValue} />
             <Link to={`/map/${checkedValue}`} >Rechercher</Link>        
         </>
     );
