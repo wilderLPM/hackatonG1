@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "RobotoCondensed-Thin";
-  src: url(assets/RobotoCondensed-Thin.ttf);
+    font-family: "";
+    src: url(assets/Roboto/RobotoCondensed-Thin.ttf);
 }
 
 :root {
@@ -15,9 +15,4 @@
 
 .footer {
   text-align: center;
-}
-
-h1 {
-  font-family: var(--font-family-text);
-  font-size: 10vh;
 }
