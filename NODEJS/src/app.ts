@@ -1,5 +1,5 @@
 import AppRoads from "./routes/AppRoads.js";
-import { app, port } from "./constants";
+import { app, port } from "./constants/index.js";
 
 app.use(AppRoads);
 app.listen(port, () => {

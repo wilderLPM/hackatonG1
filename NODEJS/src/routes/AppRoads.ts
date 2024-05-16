@@ -1,6 +1,6 @@
 import { Router } from "express";
-import FrontRoads from "./FrontRoads";
-import PythonRoads from "./PythonRoads";
+import FrontRoads from "./FrontRoads.js";
+import PythonRoads from "./PythonRoads.js";
 
 const AppRoads = Router();
 
