@@ -6,9 +6,13 @@ import "./App.css";
 function App() {
   return (
     <>
-      <NavBar />
-      <Outlet />
-      <Footer />
+      <div className="wrapper">
+        <NavBar />
+        <Outlet />
+        <div className="footer">
+          <Footer />
+        </div>
+      </div>
     </>
   );
 }
