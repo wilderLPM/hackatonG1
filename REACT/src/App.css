@@ -1,18 +1,23 @@
 @font-face {
-    font-family: "";
-    src: url(assets/RobotoCondensed-Thin.ttf);
+  font-family: "RobotoCondensed-Thin";
+  src: url(assets/RobotoCondensed-Thin.ttf);
 }
 
 :root {
-    --font-family-title : "";
+  --font-family-text: "RobotoCondensed-Thin";
 }
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-text);
 }
 
-h1{
-    font-family: var(--font-family-title);
-    font-size: 10vh;
+.footer {
+  text-align: center;
+}
+
+h1 {
+  font-family: var(--font-family-text);
+  font-size: 10vh;
 }
