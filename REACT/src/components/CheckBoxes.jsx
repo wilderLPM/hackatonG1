@@ -9,7 +9,7 @@ export default function CheckBoxes({ setCheckedValue, checkedValue }) {
     ];
   
     const handleButtonClick = (destination) => {
-      setCheckedValue(destination);
+      destination === checkedValue ? setCheckedValue(null) : setCheckedValue(destination);
     };
   
     return (

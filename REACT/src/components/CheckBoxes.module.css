@@ -5,19 +5,20 @@
     border: 2px solid #4CAF50;
     border-radius: 8px;
     padding: 20px;
-    margin: 20px 0;
+    margin: 40px 0;
     background-color: #f9f9f9;
 }
 
 /* Styles pour le legend */
 .customLegend {
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: bold;
     color: #4CAF50;
     padding: 0 10px;
     background-color: #fff;
     border: 1px solid #4CAF50;
     border-radius: 5px;
+    text-align: center;
 }
 
 /* Styles pour les boutons */
@@ -54,18 +55,25 @@
 }
 
 .buttonImage {
-    width: 100px; /* Adjust as needed */
-    height: 100px; /* Adjust as needed */
+    width: 100px; 
+    height: 100px; 
     object-fit: cover;
-    border-radius: 50%;
+/*  border-radius: 50%; // A VOIR CE QU'ON PREFERE */
 }
 
 .buttonText {
     margin-top: 10px;
+    color: black;
+    font-size: x-large;
 }
 
 /* Media query for desktop */
 @media screen and (min-width: 768px) {
+    .customFieldset{
+        margin-top: 100px;
+        margin-bottom: 50px;
+        width: 90%;
+    }
     .selectButton {
         flex: 1 1 calc(50% - 10px);
         /* Subtract margin to fit 2 buttons per row */
