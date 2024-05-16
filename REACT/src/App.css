@@ -1,8 +1,18 @@
-* {
-  margin: 0;
-  padding: 0;
+@font-face {
+    font-family: "";
+    src: url(assets/RobotoCondensed-Thin.ttf);
 }
 
-body {
-  min-height: 100vh;
+:root {
+    --font-family-title : "";
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-family: var(--font-family-title);
+    font-size: 10vh;
 }
