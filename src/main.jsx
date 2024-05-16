@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import Map from "./pages/Map.jsx";
-
 import React from "react";
 import ReactDOM from "react-dom/client";
+
+import Home from "./pages/Home.jsx";
+import Map from "./pages/Map.jsx";
 import App from "./App.jsx";
 import "./index.css";
 
@@ -17,14 +17,17 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/Map",
+        path: "/map/:destination",
         element: <Map />,
+        id: 'map',
       },
     ],
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>
