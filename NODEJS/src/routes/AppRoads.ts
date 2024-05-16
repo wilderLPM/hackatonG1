@@ -1,7 +1,9 @@
 import { Router } from "express";
-import { index } from "../controllers/AppController.js";
+import FrontRoads from "./FrontRoads";
+import PythonRoads from "./PythonRoads";
 
 const AppRoads = Router();
 
-AppRoads.get('/cities', index);
+AppRoads.use('/react', FrontRoads)
+AppRoads.use('/python', PythonRoads);
 export default AppRoads;
