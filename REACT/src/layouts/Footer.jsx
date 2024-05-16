@@ -1,7 +1,11 @@
+import styles from "./Footer.module.css";
+
 export default function Footer() {
   return (
     <>
-      <p>🌿Copy right Wild Code School🌿</p>
+      <div className={styles.footer}>
+        <p>🦊©Wild Code School🦊</p>
+      </div>
     </>
   );
 }
