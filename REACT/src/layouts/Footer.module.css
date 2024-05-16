@@ -3,9 +3,13 @@
   bottom: 0;
   width: 100%;
   background-color: #9de63fff;
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-p {
+.footer > p {
   font-size: 20px;
   font-family: var(--font-family-text);
 }
