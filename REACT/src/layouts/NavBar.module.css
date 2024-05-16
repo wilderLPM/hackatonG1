@@ -5,7 +5,7 @@
 }
 
 .navBar > h1{
-    font-family: var(--font-family-title);
+    font-family: var(--font-family-text);
     font-size: 8vh;
     color: black;
 /*     -webkit-text-stroke-width: 1px;
@@ -15,4 +15,5 @@
 .navBar > h1 > p{
     display: inline;
     color: white;
+    font-size: 8vh;
 }

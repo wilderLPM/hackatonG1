@@ -2,10 +2,10 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "../ui_components/Loader.css";
 import styles from "./Map.module.css";
-import TreeZero from "../assets/treezero.svg";
-import TreeOne from "../assets/treeone.svg";
-import TreeTwo from "../assets/treetwo.svg";
-import TreeThree from "../assets/treethree.svg";
+import TreeZero from "../assets/Tree/treezero.svg";
+import TreeOne from "../assets/Tree/treeone.svg";
+import TreeTwo from "../assets/Tree/treetwo.svg";
+import TreeThree from "../assets/Tree/treethree.svg";
 
 export default function Map() {
   const [isLoading, setIsLoading] = useState(true);
