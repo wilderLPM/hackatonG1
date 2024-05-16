@@ -3,3 +3,16 @@
     justify-content: center;
     background-color: #9DE63Fff;
 }
+
+.navBar > h1{
+    font-family: var(--font-family-title);
+    font-size: 8vh;
+    color: black;
+/*     -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.534);  */
+}
+
+.navBar > h1 > p{
+    display: inline;
+    color: white;
+}

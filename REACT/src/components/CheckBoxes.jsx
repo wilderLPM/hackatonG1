@@ -1,17 +1,33 @@
-export default function CheckBoxes({setCheckedValue}){
-    const destinations = ['Mer','Montagne','Forêt','Campagne']
-    function handleChange(e) {
-        setCheckedValue(e.target.id)
-    }
-    return(
-        <fieldset>
-            <legend>Choisissez la destination voulue</legend>
-            {destinations.map(destination =>
-            <div key={destination} >
-                <input type='radio' id={destination} name="options" onChange={handleChange}/>
-                <label htmlFor={destination}>{destination}</label>
-            </div> 
-            )}
-        </fieldset>
-    )
-}
+import styles from "./CheckBoxes.module.css";
+
+export default function CheckBoxes({ setCheckedValue, checkedValue }) {
+    const destinations = [
+      { name: 'Mer', image: '/beach.webp' },
+      { name: 'Montagne', image: '/mountain.webp' },
+      { name: 'Forêt', image: '/forest.webp' },
+      { name: 'Campagne', image: '/countryside.webp' }
+    ];
+  
+    const handleButtonClick = (destination) => {
+      setCheckedValue(destination);
+    };
+  
+    return (
+      <fieldset className={styles.customFieldset}>
+        <legend className={styles.customLegend}>Choisissez la destination voulue</legend>
+        <div className={styles.buttonsContainer}>
+          {destinations.map((destination, index) => (
+            <button
+              key={index}
+              type="button"
+              className={`${styles.selectButton} ${checkedValue === destination.name ? styles.selected : ''}`}
+              onClick={() => handleButtonClick(destination.name)}
+            >
+              <img src={destination.image} alt={destination.name} className={styles.buttonImage} />
+              <span className={styles.buttonText}>{destination.name}</span>
+            </button>
+          ))}
+        </div>
+      </fieldset>
+    );
+  }
