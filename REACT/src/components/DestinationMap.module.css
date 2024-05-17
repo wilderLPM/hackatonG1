@@ -1,0 +1,10 @@
+.destinationMap{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    width: 90%;
+}
+.destinationMap > iframe{
+    width: 80%;
+    height: 400px;
+}

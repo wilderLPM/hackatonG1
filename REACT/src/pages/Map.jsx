@@ -28,10 +28,10 @@ export default function Map() {
   const { destination } = useParams();
 
   return (
-    <>
+    <div className={styles.mapPage} >
       <Loader isLoading={isLoading} destination={destination} currentIndex={currentIndex} images={images} />
       <DestinationMap setIsLoading={setIsLoading} />
       <Destination />
-    </>
+    </div>
   );
 }
