@@ -1,0 +1,20 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home > a{
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: var(--main-color);
+    width: 136px;
+    height: 38px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    color: black;
+}

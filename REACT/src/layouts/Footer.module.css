@@ -1,15 +1,21 @@
 .footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  background-color: #9de63fff;
+  background-color: var(--main-color);
   height: 7vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .footer > p {
   font-size: 20px;
   font-family: var(--font-family-text);
+}
+
+@media screen and (min-width: 768px) {
+  .footer{
+    position: absolute;
+    bottom: 0;
+  }
 }

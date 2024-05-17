@@ -1,7 +1,8 @@
 .navBar{
     display: flex;
     justify-content: center;
-    background-color: #9DE63Fff;
+    background-color: var(--main-color);
+    padding: 10px;
 }
 
 .navBar > h1{
@@ -16,4 +17,10 @@
     display: inline;
     color: white;
     font-size: 8vh;
+}
+
+@media screen and (max-width: 767px) {
+    .navBar > h1,.navBar > h1 > p{
+        font-size: 6vh;
+    }
 }
