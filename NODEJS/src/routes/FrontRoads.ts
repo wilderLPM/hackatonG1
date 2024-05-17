@@ -1,13 +1,13 @@
 import { Router } from "express";
 import { index, find, insideMultiPolygon } from "../controllers/FrontController.js";
 import {findByName, findByStartedBy, findByEndedBy, findByCoordinate, findByLocation, findByStartedByLocation, findByEndedByLocation} from "../controllers/FilterPolygonController.js";
-import AuthenticationRoads from "./AuthenticationRoads";
 import {authenticationMiddleWare} from "../middlewares/AuthenticationMiddleWare";
+import {authenticated} from "../controllers/AuthenticatedController";
 
 const FrontRoads = Router();
 
 
-FrontRoads.use('/', AuthenticationRoads)
+FrontRoads.post('/signup', authenticated)
     .get('/polygons', authenticationMiddleWare, index)
     .get('/polygons/:id', authenticationMiddleWare, find)
     .get('/is-in-polygon/:lat/:long', authenticationMiddleWare, insideMultiPolygon)

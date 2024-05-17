@@ -17,7 +17,3 @@ export const authenticated = (req: any, res: any) => {
     else
         res.status(404).json({error: "Password or email has failed", status: res.statusCode});
 }
-
-const login = (req: any, res: any) => {
-
-}
