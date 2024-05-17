@@ -2,10 +2,10 @@ import styles from "./CheckBoxes.module.css";
 
 export default function CheckBoxes({ setCheckedValue, checkedValue }) {
     const destinations = [
-      { name: 'Mer', image: '/beach.webp' },
-      { name: 'Montagne', image: '/mountain.webp' },
-      { name: 'Forêt', image: '/forest.webp' },
-      { name: 'Campagne', image: '/countryside.webp' }
+      { name: 'Annecy', image: '/annecy.jpg' },
+      { name: 'Chambéry', image: '/chambery2.jpg' },
+      { name: 'Chamonix', image: '/Chamonix.webp' },
+      { name: 'Grenoble', image: '/Grenoble.webp' }
     ];
   
     const handleButtonClick = (destination) => {
@@ -15,19 +15,18 @@ export default function CheckBoxes({ setCheckedValue, checkedValue }) {
     return (
       <fieldset className={styles.customFieldset}>
         <legend className={styles.customLegend}>Choisissez la destination voulue</legend>
-        <div className={styles.buttonsContainer}>
           {destinations.map((destination, index) => (
-            <button
-              key={index}
-              type="button"
-              className={`${styles.selectButton} ${checkedValue === destination.name ? styles.selected : ''}`}
-              onClick={() => handleButtonClick(destination.name)}
-            >
-              <img src={destination.image} alt={destination.name} className={styles.buttonImage} />
+            <div key={index} className={styles.buttonsContainer}>
+              <button
+                type="button"
+                className={`${styles.selectButton} ${checkedValue === destination.name ? styles.selected : ''}`}
+                onClick={() => handleButtonClick(destination.name)}
+              >
+                <img src={destination.image} alt={destination.name} className={styles.buttonImage} />
+              </button>
               <span className={styles.buttonText}>{destination.name}</span>
-            </button>
+            </div>
           ))}
-        </div>
       </fieldset>
     );
   }
