@@ -27,10 +27,10 @@ export default function Map() {
     <>
       <div className={styles.container}>
         {isLoading === true &&
-        destination !== "Montagne" &&
-        destination !== "Forêt" ? (
+        destination !== "Chamonix" &&
+        destination !== "Grenoble" ? (
           <div className={destination} />
-        ) : destination === "Montagne" ? (
+        ) : destination === "Chamonix" ? (
           <section className="circle">
             <div className="lake">
               <div></div>

@@ -1,6 +1,4 @@
-/* HTML: <div class="loader"></div> */
-
-.Mer {
+.Annecy {
   width: 80px;
   height: 40px;
   background: radial-gradient(circle 11px at top, #0000 94%, #b0e5f3) 0 20px,
@@ -21,7 +19,7 @@
 }
 
 /* HTML: <div class="loader"></div> */
-.Campagne {
+.Chambéry {
   width: calc(6 * 30px);
   height: 50px;
   display: flex;
@@ -32,7 +30,7 @@
   animation: l11 2s infinite steps(7);
   margin: 3rem;
 }
-.Campagne:before {
+.Chambéry:before {
   content: "";
   width: 30px;
   height: 25px;
@@ -65,19 +63,19 @@
     45deg,
     #5f2c82 10%,
     #49a09d 90%
-  ); /* Chrome 10+, Saf5.1+ */
+  ); /* Chrome 10+, Saf5.1+ /
   background: -moz-linear-gradient(
     45deg,
     #5f2c82 10%,
     #49a09d 90%
-  ); /* FF3.6+ */
-  background: -ms-linear-gradient(45deg, #5f2c82 10%, #49a09d 90%); /* IE10 */
+  ); / FF3.6+ /
+  background: -ms-linear-gradient(45deg, #5f2c82 10%, #49a09d 90%); / IE10 /
   background: -o-linear-gradient(
     45deg,
     #5f2c82 10%,
     #49a09d 90%
-  ); /* Opera 11.10+ */
-  background: linear-gradient(45deg, #5f2c82 10%, #49a09d 90%); /* W3C */
+  ); / Opera 11.10+ /
+  background: linear-gradient(45deg, #5f2c82 10%, #49a09d 90%); / W3C */
   border: 6px solid orange;
   overflow: hidden;
   margin: 3rem;
@@ -123,7 +121,6 @@
   background-color: #eee;
   border-radius: 10px;
 }
-
 .clouds div {
   z-index: 11;
   position: absolute;
