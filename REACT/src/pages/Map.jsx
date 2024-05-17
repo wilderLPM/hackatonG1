@@ -31,7 +31,7 @@ export default function Map() {
     <div className={styles.mapPage} >
       <Loader isLoading={isLoading} destination={destination} currentIndex={currentIndex} images={images} />
       <DestinationMap setIsLoading={setIsLoading} />
-      <Destination />
+      <Destination destination={destination} />
     </div>
   );
 }
