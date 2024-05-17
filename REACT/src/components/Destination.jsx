@@ -15,20 +15,21 @@ const cityKeyMappings = {
           {cityKeyMappings[destination].map((keyValue) => (
             <div key={keyValue}>
               <ul>
-                {Object.entries(data).map(([key, value]) => (
-                  <React.Fragment key={key}>
-                    {value[keyValue].includes("https://") ? (
-                      <img src={value[keyValue]} alt={key} className={styles.destinationImg}/>
-                    ) : (
-                      <li>
-                        <strong>{key}:</strong> {value[keyValue]}
-                      </li>
-                    )}
-                  </React.Fragment>
+                {Object.entries(data).map(([key, value], index) => (
+                  index === 0 ? (
+                    <h2>{value[keyValue]}</h2>
+                  ) : index === 1 ? (
+                    <img src={value[keyValue]} alt={key} className={styles.destinationImg} />
+                  ) : (
+                    <li key={key}>
+                      <strong>{key}:</strong> {value[keyValue]}
+                    </li>
+                  )
                 ))}
               </ul>
             </div>
           ))}
         </div>
       );
-}
+    }
+  
