@@ -12,10 +12,3 @@
   font-size: 20px;
   font-family: var(--font-family-text);
 }
-
-@media screen and (min-width: 768px) {
-  .footer{
-    position: absolute;
-    bottom: 0;
-  }
-}

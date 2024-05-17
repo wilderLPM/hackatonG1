@@ -24,6 +24,7 @@
 /* Styles pour les boutons */
 .buttonsContainer {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
@@ -55,26 +56,29 @@
 }
 
 .buttonImage {
-    width: 100px; 
-    height: 100px; 
+    width: 439px; 
+    height: 246px; 
     object-fit: cover;
 /*  border-radius: 50%; // A VOIR CE QU'ON PREFERE */
 }
 
 .buttonText {
-    margin-top: 10px;
     color: black;
     font-size: x-large;
+    text-align: center;
 }
 
 /* Media query for desktop */
 @media screen and (min-width: 768px) {
     .customFieldset{
-        margin-top: 100px;
-        margin-bottom: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 20px;
         width: 90%;
     }
-    .selectButton {
+    .buttonsContainer {
         flex: 1 1 calc(50% - 10px);
         /* Subtract margin to fit 2 buttons per row */
     }
