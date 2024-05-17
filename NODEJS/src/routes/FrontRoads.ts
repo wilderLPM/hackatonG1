@@ -3,6 +3,9 @@ import { index } from "../controllers/FrontController.js";
 
 const FrontRoads = Router();
 
-FrontRoads.get('/polygon/:lat/:long', index); // Say if lat and long are inside multiple polygon
-/* Front Python roads */
+// Say if lat and long are inside multiple polygon
+FrontRoads.get('/polygon/:lat/:long', index);
+
+// Roads for get python datas
+
 export default FrontRoads;
