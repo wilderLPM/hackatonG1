@@ -1,7 +1,7 @@
 import fs from 'fs';
 
 export const index = (req: any, res: any) => {
-    const polygons = req.body.polygon;
+    const polygons = req.body.polygons;
     fs.writeFile('./src/data/data.json', JSON.stringify({polygons: polygons}), {
             encoding: "utf-8",
             flag: "w",
