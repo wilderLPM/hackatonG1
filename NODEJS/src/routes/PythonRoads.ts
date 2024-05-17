@@ -1,6 +1,6 @@
 import {Router} from "express";
 import {index, points} from "../controllers/PythonPolygonController.js";
-import {find, insideMultiPolygon} from "../controllers/FrontController";
+import {find, insideMultiPolygon} from "../controllers/FrontController.js";
 import {
     findByCoordinate,
     findByEndedBy, findByEndedByLocation,
@@ -8,7 +8,7 @@ import {
     findByName,
     findByStartedBy,
     findByStartedByLocation
-} from "../controllers/FilterPolygonController";
+} from "../controllers/FilterPolygonController.js";
 
 const PythonRoads = Router();
 
