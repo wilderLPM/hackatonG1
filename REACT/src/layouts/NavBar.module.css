@@ -1,3 +1,6 @@
+.navBar > a {
+  text-decoration: none;
+}
 .navBar {
   display: flex;
   justify-content: center;
@@ -5,7 +8,7 @@
   padding: 10px;
 }
 
-.navBar > h1 {
+.navBar > a > h1 {
   font-family: var(--font-family-text);
   font-size: 8vh;
   color: black;
@@ -13,15 +16,15 @@
     -webkit-text-stroke-color: rgba(0, 0, 0, 0.534);  */
 }
 
-.navBar > h1 > p {
+.navBar > a > h1 > p {
   display: inline;
   color: white;
   font-size: 8vh;
 }
 
 @media screen and (max-width: 767px) {
-  .navBar > h1,
-  .navBar > h1 > p {
+  .navBar > a > h1,
+  .navBar > a > h1 > p {
     font-size: 6vh;
   }
 }
