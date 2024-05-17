@@ -2,7 +2,7 @@ import { Router } from "express";
 import { index, find, insideMultiPolygon } from "../controllers/FrontController.js";
 import {findByName, findByStartedBy, findByEndedBy, findByCoordinate, findByLocation, findByStartedByLocation, findByEndedByLocation} from "../controllers/FilterPolygonController.js";
 import {authenticationMiddleWare} from "../middlewares/AuthenticationMiddleWare";
-import {authenticated} from "../controllers/AuthenticatedController";
+import {authenticated} from "../controllers/AuthenticatedController.js";
 
 const FrontRoads = Router();
 
