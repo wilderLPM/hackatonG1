@@ -3,5 +3,20 @@
 }
 
 .destinationImg{
-    width: 50px;
+    width: 20%;
+}
+/* 
+.destinationBanner{
+    border: solid green;
+} */
+.destinationBanner > ul{
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+list-style: none;
+}
+
+.destinationBanner > ul > h2{
+    width: 100%;
+    text-align: center;
 }

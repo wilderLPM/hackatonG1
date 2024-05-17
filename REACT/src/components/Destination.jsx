@@ -11,9 +11,9 @@ const cityKeyMappings = {
     Grenoble: [12, 14, 16, 18],
     };
     return (
-        <div>
+        <div >
           {cityKeyMappings[destination].map((keyValue) => (
-            <div key={keyValue}>
+            <div key={keyValue} className={styles.destinationBanner}>
               <ul>
                 {Object.entries(data).map(([key, value], index) => (
                   index === 0 ? (
@@ -22,7 +22,7 @@ const cityKeyMappings = {
                     <img src={value[keyValue]} alt={key} className={styles.destinationImg} />
                   ) : (
                     <li key={key}>
-                      <strong>{key}:</strong> {value[keyValue]}
+ {value[keyValue]}
                     </li>
                   )
                 ))}
