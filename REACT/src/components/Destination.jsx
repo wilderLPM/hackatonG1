@@ -1,4 +1,5 @@
 import data from '../data/markpoint.json';
+import styles from "./Destination.module.css";
 
 export default function Destination(){
 
@@ -9,7 +10,7 @@ export default function Destination(){
         return acc;
     }, {});
     return (
-        <div>
+        <div className={styles.destinationInfo} >
             <h2>Values with Key "3":</h2>
             <ul>
             {Object.entries(valuesWithKey3).map(([key, value]) => (
