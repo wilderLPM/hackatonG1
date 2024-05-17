@@ -1,23 +1,34 @@
-import data from '../data/markpoint.json';
+import React from 'react'
+import data from '../data/poi.json';
+import styles from "./Destination.module.css";
 
-export default function Destination(){
+export default function Destination({destination}){
 
-    const valuesWithKey3 = Object.keys(data).reduce((acc, key) => {
-        if (data[key]["3"]) {
-            acc[key] = data[key]["3"];
-        }
-        return acc;
-    }, {});
+const cityKeyMappings = {
+    Annecy: [1, 2, 3, 4],
+    Chambéry: [5, 6, 7, 8],
+    Chamonix: [15, 11, 10, 9],
+    Grenoble: [12, 14, 16, 18],
+    };
     return (
         <div>
-            <h2>Values with Key "3":</h2>
-            <ul>
-            {Object.entries(valuesWithKey3).map(([key, value]) => (
-                <li key={key}>
-                <strong>{key}:</strong> {value}
-                </li>
-            ))}
-            </ul>
+          {cityKeyMappings[destination].map((keyValue) => (
+            <div key={keyValue}>
+              <ul>
+                {Object.entries(data).map(([key, value]) => (
+                  <React.Fragment key={key}>
+                    {value[keyValue].includes("https://") ? (
+                      <img src={value[keyValue]} alt={key} className={styles.destinationImg}/>
+                    ) : (
+                      <li>
+                        <strong>{key}:</strong> {value[keyValue]}
+                      </li>
+                    )}
+                  </React.Fragment>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
-        );
+      );
 }
