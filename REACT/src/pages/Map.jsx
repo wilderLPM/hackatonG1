@@ -1,11 +1,15 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import "../ui_components/Loader.css";
+
 import styles from "./Map.module.css";
 import TreeZero from "../assets/Tree/treezero.svg";
 import TreeOne from "../assets/Tree/treeone.svg";
 import TreeTwo from "../assets/Tree/treetwo.svg";
 import TreeThree from "../assets/Tree/treethree.svg";
+
+import Loader from "../ui_components/Loader";
+import DestinationMap from "../components/DestinationMap";
+import Destination from "../components/Destination";
 
 export default function Map() {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,32 +29,9 @@ export default function Map() {
 
   return (
     <>
-      <div className={styles.container}>
-        {isLoading === true &&
-        destination !== "Chamonix" &&
-        destination !== "Grenoble" ? (
-          <div className={destination} />
-        ) : destination === "Chamonix" ? (
-          <section className="circle">
-            <div className="lake">
-              <div></div>
-            </div>
-            <div className="clouds">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div className="mountain">
-              <div></div>
-            </div>
-            <div className="mountain">
-              <div></div>
-            </div>
-          </section>
-        ) : (
-          <img src={images[currentIndex]} alt="tree" />
-        )}
-      </div>
+      <Loader isLoading={isLoading} destination={destination} currentIndex={currentIndex} images={images} />
+      <DestinationMap setIsLoading={setIsLoading} />
+      <Destination />
     </>
   );
 }
